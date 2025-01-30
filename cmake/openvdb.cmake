@@ -28,6 +28,8 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/oneapi-src/oneTBB.git
     GIT_TAG        v2021.8.0
 )
+set(TBB_TEST OFF CACHE BOOL "Disable TBB tests" FORCE)
+
 
 set(CMAKE_CXX_FLAGS_OLD ${CMAKE_CXX_FLAGS})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DTBB_ALLOCATOR_TRAITS_BROKEN")
